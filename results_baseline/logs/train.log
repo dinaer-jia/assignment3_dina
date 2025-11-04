@@ -1,0 +1,37 @@
+INFO: COMMAND: train.py --data toy_example/data/prepared/ --src-tokenizer toy_example/tokenizers/cz-bpe-1000.model --tgt-tokenizer toy_example/tokenizers/en-bpe-1000.model --source-lang cz --target-lang en --batch-size 32 --arch transformer --max-epoch 10 --log-file toy_example/logs/train.log --save-dir toy_example/checkpoints/ --ignore-checkpoints --encoder-dropout 0.1 --decoder-dropout 0.1 --dim-embedding 256 --attention-heads 4 --dim-feedforward-encoder 1024 --dim-feedforward-decoder 1024 --max-seq-len 100 --n-encoder-layers 3 --n-decoder-layers 3
+INFO: Arguments: {'cuda': False, 'data': 'toy_example/data/prepared/', 'source_lang': 'cz', 'target_lang': 'en', 'src_tokenizer': 'toy_example/tokenizers/cz-bpe-1000.model', 'tgt_tokenizer': 'toy_example/tokenizers/en-bpe-1000.model', 'max_tokens': None, 'batch_size': 32, 'train_on_tiny': False, 'arch': 'transformer', 'max_epoch': 10, 'clip_norm': 4.0, 'lr': 0.0003, 'patience': 3, 'max_length': 300, 'log_file': 'toy_example/logs/train.log', 'save_dir': 'toy_example/checkpoints/', 'restore_file': 'checkpoint_last.pt', 'save_interval': 1, 'no_save': False, 'epoch_checkpoints': False, 'ignore_checkpoints': True, 'encoder_dropout': 0.1, 'decoder_dropout': 0.1, 'dim_embedding': 256, 'attention_heads': 4, 'dim_feedforward_encoder': 1024, 'dim_feedforward_decoder': 1024, 'max_seq_len': 100, 'n_encoder_layers': 3, 'n_decoder_layers': 3, 'encoder_embed_path': None, 'decoder_embed_path': None, 'seed': 687091665}
+INFO: Built a model with 6346472 parameters
+INFO: Epoch 000: loss 5.471 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 29.15 | clip 1
+INFO: Time to complete epoch 000 (training only): 13.47 seconds
+INFO: Epoch 000: valid_loss 5.36 | num_tokens 27.2 | batch_size 100 | valid_perplexity 214 | BLEU 0.000
+INFO: Epoch 001: loss 4.902 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 22.23 | clip 1
+INFO: Time to complete epoch 001 (training only): 13.42 seconds
+INFO: Epoch 001: valid_loss 5.2 | num_tokens 27.2 | batch_size 100 | valid_perplexity 181 | BLEU 0.128
+INFO: Epoch 002: loss 4.587 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 22.55 | clip 1
+INFO: Time to complete epoch 002 (training only): 13.33 seconds
+INFO: Epoch 002: valid_loss 5.06 | num_tokens 27.2 | batch_size 100 | valid_perplexity 158 | BLEU 0.142
+INFO: Epoch 003: loss 4.288 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 23.09 | clip 1
+INFO: Time to complete epoch 003 (training only): 13.19 seconds
+INFO: Epoch 003: valid_loss 4.92 | num_tokens 27.2 | batch_size 100 | valid_perplexity 137 | BLEU 0.050
+INFO: Epoch 004: loss 4.004 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 23.86 | clip 1
+INFO: Time to complete epoch 004 (training only): 14.59 seconds
+INFO: Epoch 004: valid_loss 4.81 | num_tokens 27.2 | batch_size 100 | valid_perplexity 123 | BLEU 0.226
+INFO: Epoch 005: loss 3.755 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 25.47 | clip 1
+INFO: Time to complete epoch 005 (training only): 14.66 seconds
+INFO: Epoch 005: valid_loss 4.73 | num_tokens 27.2 | batch_size 100 | valid_perplexity 113 | BLEU 0.312
+INFO: Epoch 006: loss 3.514 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 25.32 | clip 1
+INFO: Time to complete epoch 006 (training only): 13.27 seconds
+INFO: Epoch 006: valid_loss 4.66 | num_tokens 27.2 | batch_size 100 | valid_perplexity 105 | BLEU 0.419
+INFO: Epoch 007: loss 3.315 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 30.02 | clip 1
+INFO: Time to complete epoch 007 (training only): 12.86 seconds
+INFO: Epoch 007: valid_loss 4.61 | num_tokens 27.2 | batch_size 100 | valid_perplexity 101 | BLEU 0.285
+INFO: Epoch 008: loss 3.119 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 29.99 | clip 1
+INFO: Time to complete epoch 008 (training only): 13.01 seconds
+INFO: Epoch 008: valid_loss 4.57 | num_tokens 27.2 | batch_size 100 | valid_perplexity 96.2 | BLEU 0.342
+INFO: Epoch 009: loss 2.945 | lr 0.0003 | num_tokens 29.49 | batch_size 31.25 | grad_norm 29.27 | clip 0.9688
+INFO: Time to complete epoch 009 (training only): 13.19 seconds
+INFO: Epoch 009: valid_loss 4.55 | num_tokens 27.2 | batch_size 100 | valid_perplexity 94.2 | BLEU 0.644
+INFO: Loading the best model for final evaluation on the test set
+INFO: Loaded checkpoint toy_example/checkpoints/checkpoint_last.pt
+INFO: Test set results: BLEU 0.558
+INFO: Final Test Set Results: BLEU 0.56
